@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chatbot Interface with Embedded Website</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Fullscreen Iframe to embed another website -->
+  <!-- <iframe src="https://my304874.s4hana.ondemand.com/ui?sap-language=EN&help-mixedLanguages=false&help-autoStartTour=PR_A8DA8C2F83492685#Shell-home" id="content-iframe" class="fullscreen-iframe" frameborder="0"></iframe> -->
+
+  <iframe src="https://my300187.s4hana.ondemand.com/ui#Shell-home" id="content-iframe" class="fullscreen-iframe" frameborder="0"></iframe>
+
+  <!-- Chatbot Container -->
+  <div class="chatbot-container">
+    <button id="chatbot-button" class="chatbot-button">💎</button>
+
+    <!-- Chatbot Popup Window -->
+    <div id="chatbot-popup" class="chatbot-popup hidden">
+      <div class="chat-header">
+        <span>Joule</span>
+        <div class="header-icons">
+          <button class="icon-button" id="fullscreen-button">🔍</button>
+          <button class="icon-button" id="close-chat">X</button>
+        </div>
+      </div>
+
+      <!-- Initial Greeting Screen -->
+      <div id="greeting-screen" class="greeting-screen">
+        <div class="greeting-icon">💎</div>
+        <div class="greeting-text">Hello Erik, <br> How can I help you?</div>
+        <div class="greeting-subtext">Talk to me naturally. For example, ‘View My Display Name’</div>
+        <div class="quick-actions">
+          <button class="quick-action-button">View My Display Name</button>
+          <button class="quick-action-button">Give Feedback</button>
+          <button class="quick-action-button">Create Position</button>
+          <button class="quick-action-button">Request Feedback</button>
+        </div>
+      </div>
+
+      <!-- Chat Window -->
+      <div id="chat-window" class="chat-window hidden">
+        <div id="chat-output"></div>
+      </div>
+
+      <!-- Employee Selection -->
+      <div id="employee-selection" class="employee-selection hidden">
+        <div class="employee-card">
+          <div class="employee-info">
+            <p><strong>Susan Johnson</strong></p>
+            <p>Operations Specialist</p>
+            <p>sjohnson@effectivepeople.com</p>
+          </div>
+          <button class="select-button">Select</button>
+        </div>
+        <div class="employee-card">
+          <div class="employee-info">
+            <p><strong>Peter Donovan</strong></p>
+            <p>Recruitment Manager</p>
+            <p>pdonovan@effectivepeople.com</p>
+          </div>
+          <button class="select-button">Select</button>
+        </div>
+      </div>
+
+      <!-- Input Section -->
+      <div class="input-section">
+        <input type="text" id="user-input" placeholder="How can I help you?" />
+        <button id="send-button">▲</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
